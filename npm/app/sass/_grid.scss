@@ -1,0 +1,92 @@
+// WARNING : don't forget to prefix Flexbox for older browsers!
+
+// Usage in vanilla CSS:
+// - <div class="grid-4"> for an equal fourth columns grid container
+// - <div class="grid-2-1"> for an uneven columns grid container
+
+$gutter: 1em !default;
+$number: 1 !default; // for equal columns
+
+// grid styles for container wich has a .flex-grid(n,g) class
+// n = number of columns (default = 4)
+// g = gutter value (default = 1em)
+// example : .grid-container { .grid(12, 10px); }
+.grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  vertical-align: middle;
+  align-content: center;
+  /* vertical-align: middle; */
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@mixin grid($number:$number, $gutter:$gutter) {
+  > * {
+    /* grid child can be any element */
+    flex: 0 0 auto;
+    width: (1/$number * 100) + 0%;
+    display: block; /* IE fix */
+    margin: 0 auto;
+    -webkit-box-align: center; -moz-box-align: center; /* OLD… */
+   -ms-flex-align: center; /* You know the drill now… */
+   -webkit-align-items: center;
+   align-items: center;
+
+   -webkit-box-pack: center; -moz-box-pack: center;
+   -ms-flex-pack: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+  }
+
+  > .flexitem-first {
+    order: -1;
+  }
+}
+
+/* examples */
+.grid-1 {
+  @include grid(1);
+}
+.grid-2 {
+  @include grid(2);
+}
+
+.grid-3 {
+  @include grid(3);
+}
+
+.grid-4 {
+  @include grid(4);
+}
+
+.grid-5 {
+  @include grid(5);
+}
+
+.grid-6 {
+  @include grid(6);
+}
+
+.grid-7 {
+  @include grid(7);
+}
+
+.grid-8 {
+  @include grid(8);
+}
+
+.grid-10 {
+  @include grid(10);
+}
+
+.grid-12 {
+  @include grid(12);
+}

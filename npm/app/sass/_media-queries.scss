@@ -1,0 +1,13 @@
+/**
+ * mixin for breakpoints
+ * @include breakpoint(driver) { width: 60%; }
+ */
+@mixin breakpoint($point) {
+  @if $point == driver {
+    @media (max-width: 1600px) { @content; }
+  } @else if $point == iron {
+    @media (max-width: 1250px) { @content; }
+  } @else if $point == wedge {
+    @media (max-width: 650px)  { @content; }
+  }
+ }
