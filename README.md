@@ -1,2 +1,2 @@
 # exampleProject
-Example Projects  to use either NPM or gulp as build tools
+Example Projects to use either NPM or GULP as build tools
