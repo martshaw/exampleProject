@@ -6,7 +6,7 @@
 var gulp     = require('gulp');
 var config   = require('../config');
 
-gulp.task('watch', ['watchify','browserSync'], function() {
+gulp.task('watch', ['watchify', 'browserSync'], function() {
     'use strict';
     gulp.watch(config.lint.src,   ['lint']);
     gulp.watch(config.sass.src,   ['sass, minifyCss']);

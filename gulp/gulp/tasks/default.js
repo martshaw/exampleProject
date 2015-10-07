@@ -5,5 +5,5 @@ gulp.task('clean', function(done) {
     del(['build'], done);
 });
 gulp.task('default', function() {
-    gulp.start('clean', 'sass', 'markup', 'json', 'lint', 'watch');
+    gulp.start('clean', 'sass', 'minifyCss', 'markup', 'json', 'lint', 'watch');
 });

@@ -26,10 +26,10 @@ module.exports = {
     }
   },
   gulp: {
-    src: gp + '/*/**.js'
+    src: gp + '/**/*.js'
   },
   lint: {
-    src: src + '/*/**.js'
+    src: src + '/**/*.js'
   },
   images: {
     src: src + './images/**',
@@ -49,7 +49,7 @@ module.exports = {
    bundleConfigs: [{
         entries: src + '/js/app.js',
         dest: dest + '/js/',
-        outputName: 'bundle.js',
+        outputName: 'scripts.min.js',
         // list of externally available modules to exclude from the bundle
         external: ['jquery', 'underscore'],
         exclude: '/js/publish.min.js, ../node_modules'
