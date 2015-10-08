@@ -17,6 +17,7 @@
     "glob": "^5.0.15",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.0.2",
+    "gulp-concat": "^2.6.0",
     "gulp-csso": "^1.0.0",
     "gulp-eslint": "^1.0.0",
     "gulp-exec": "^2.1.2",

@@ -1,14 +1,16 @@
 var gulp      = require('gulp');
-var config    = require('../config').production;
+var config    = require('../config');
 var size      = require('gulp-filesize');
 var csso      = require('gulp-csso');
-var rename    = require('gulp-rename');
+var concat    = require('gulp-concat');
+var browserSync = require('browser-sync');
 
 gulp.task('minifyCss', ['sass'], function() {
     'use strict';
-    return gulp.src(config.cssSrc)
+    return gulp.src(config.production.cssSrc)
+        .pipe(concat('style.min.css'))
         .pipe(csso())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest(config.dest + '/css/'))
-        .pipe(size());
+        .pipe(gulp.dest(config.production.dest + '/css/'))
+        .pipe(size())
+        .pipe(browserSync.reload({stream:true}));
 });
