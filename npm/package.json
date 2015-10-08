@@ -1,7 +1,7 @@
 {
   "name": "Mart",
   "version": "1.0.0",
-  "description": "Facebook connect example",
+  "description": "Example NPM Setup",
   "main": "app.js",
   "devDependencies": {
     "argv": "0.0.2",
@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "martshaw"
+    "url": "https://github.com/martshaw/exampleProject/tree/master/npm"
   },
   "scripts": {
     "build:js": "browserify app/js/app.js --debug > dist/js/scripts.min.js",

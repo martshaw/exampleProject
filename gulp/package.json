@@ -1,17 +1,11 @@
 {
   "name": "topic",
   "version": "0.0.1",
-  "description": "Topic cloud example",
+  "description": "Example Gulp Setup",
   "main": "app.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "test"
-  },
   "repository": {
     "type": "git",
-    "url": "martshaw"
+    "url": "https://github.com/martshaw/exampleProject/tree/master/gulp"
   },
   "author": "Martin Shaw",
   "license": "ISC",
